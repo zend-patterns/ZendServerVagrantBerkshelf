@@ -13,7 +13,7 @@ Clone or download, then modify the attributes in the ```chef.json``` section.
 By default, it uses the Chef Ubuntu 14.04 form the Vagrant Cloud (https://vagrantcloud.com/chef/boxes/ubuntu-14.04), but you can use any distribution that is supported by Zend Server (http://www.zend.com/en/products/server/systemrequirements - Linux section).
 
 The attributes:
-* version: the version of Zend Server that you want to install (default: 7.0)
+* version: the version of Zend Server that you want to install (default: 7.0) - can be set to "early-access" for beta install
 * phpversion: the version of PHP (default: 5.5)
 * basedirdeb: set to "deb" to install on Apache 2.2 - otherwise leave out
 * adminpassword: the password to use for the MySQL root user
