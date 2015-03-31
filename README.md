@@ -7,6 +7,11 @@ Vagrant plugins:
 * vagrant-omnibus
 * vagrant-berkshelf
 
+Host machine:
+* chef-dk: https://downloads.chef.io/chef-dk/
+* vagrant
+* virtualbox
+
 # Usage
 Clone or download, then modify the attributes in the ```chef.json``` section.
 
@@ -20,6 +25,15 @@ The attributes:
 * production: false for a development system
 * apikeyname: the name for the api key that Chef creates - can be anything other than "admin"
 * apikeysecret: a 64 alphanumeric string
+
+# Notes
+## MySQL socket
+
+MySQL's Chef Cookbook v6 doesn't create a default socket as it supports the installation of many MySQL instances. Therefore to connect to MySQL either specify the socket explicitely or use the localhost IP address. Ref: https://github.com/chef-cookbooks/mysql#the-mysql-command-line-doesnt-work
+
+```mysql -S /var/run/mysql-default/mysqld.sock -Pwhatever```
+or
+```mysql -h 127.0.0.1 -Pwhatever```
 
 # Contribute
 Contributions are welcome. Submit pull requests to this repository.
