@@ -28,7 +28,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     # You may also specify custom JSON attributes:
     chef.json = {
         zendserver: {
-            version: "7.0",
+            version: "8.5",
             phpversion: "5.5",
             adminpassword: "1234",
             production: "false",
