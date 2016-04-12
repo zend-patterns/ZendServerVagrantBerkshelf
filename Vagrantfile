@@ -5,14 +5,14 @@
 VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
-  config.vm.box = "chef/ubuntu-14.04"
+  config.vm.box = "bento/ubuntu-14.04"
 
   config.omnibus.chef_version = :latest
 
-  config.vm.network "forwarded_port", guest: 80, host: 8080
-  config.vm.network "forwarded_port", guest: 10081, host: 10081
+#  config.vm.network "forwarded_port", guest: 80, host: 8080
+#  config.vm.network "forwarded_port", guest: 10081, host: 10081
 
-  config.vm.network "private_network", ip: "192.168.33.15"
+  config.vm.network "private_network", ip: "10.30.30.30"
 
   # config.vm.provider "virtualbox" do |vb|
   #   vb.customize ["modifyvm", :id, "--memory", "1024"]
